@@ -43,7 +43,7 @@ func getBillForMonth(costPerSend, messagesSent int) int {
 	return costPerSend * messagesSent
 }
 
-//We can explicitly ignore variables by using an underscore, or more precisely, the blank identifier _.
+// We can explicitly ignore variables by using an underscore, or more precisely, the blank identifier _.
 func getProductMessage(tier string) string {
 	quantityMsg, priceMsg, _ := getProductInfo(tier)
 	return "You get " + quantityMsg + " for " + priceMsg + "."
@@ -62,7 +62,7 @@ func getProductInfo(tier string) (string, string, string) {
 }
 
 func yearsUntilEvents(age int) (yearsUntilAdult int, yearsUntilDrinking int, yearsUntilCarRental int) {
-	// don't touch below this line
+	//naked return values are used here, so we don't need to explicitly return the values. The function will return the values of the named return variables when it reaches the end of the function.
 
 	yearsUntilAdult = 18 - age
 	if yearsUntilAdult < 0 {
