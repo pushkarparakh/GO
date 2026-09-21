@@ -1,3 +1,5 @@
+//go:build BasicsVariables
+
 package main
 
 import "fmt"
