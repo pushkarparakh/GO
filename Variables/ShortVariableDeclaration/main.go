@@ -1,5 +1,3 @@
-//go:build ShortVariableDeclaration
-
 package main
 
 import "fmt"
