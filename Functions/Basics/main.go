@@ -22,13 +22,14 @@ func test(s1 string, s2 string) {
 }
 
 func getMonthlyPrice(tier string) int {
-	if tier == "basic" {
+	switch tier {
+case "basic":
 		return 10000
-	} else if tier == "premium" {
+	case "premium":
 		return 15000
-	} else if tier == "enterprise" {
+	case "enterprise":
 		return 50000
-	} else {
+	default:
 		return 0
 	}
 }
@@ -50,13 +51,14 @@ func getProductMessage(tier string) string {
 }
 
 func getProductInfo(tier string) (string, string, string) {
-	if tier == "basic" {
+	switch tier {
+case "basic":
 		return "1,000 texts per month", "$30 per month", "most popular"
-	} else if tier == "premium" {
+	case "premium":
 		return "50,000 texts per month", "$60 per month", "best value"
-	} else if tier == "enterprise" {
+	case "enterprise":
 		return "unlimited texts per month", "$100 per month", "customizable"
-	} else {
+	default:
 		return "", "", ""
 	}
 }
